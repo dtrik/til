@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-16 Wed 22:49 -->
+<!-- 2022-11-16 Wed 23:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>TIL-2022-11-16</title>
 <meta name="author" content="damu" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -196,26 +196,44 @@
 </head>
 <body>
 <div id="content" class="content">
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#org3ee4347">1. How to set remote URL for git&#xa0;&#xa0;&#xa0;<span class="tag"><span class="git">git</span></span></a></li>
-</ul>
-</div>
-</div>
-<div id="outline-container-org3ee4347" class="outline-2">
-<h2 id="org3ee4347"><span class="section-number-2">1.</span> How to set remote URL for git&#xa0;&#xa0;&#xa0;<span class="tag"><span class="git">git</span></span></h2>
+<h1 class="title">TIL-2022-11-16</h1>
+
+<div id="outline-container-orgdfcf80b" class="outline-2">
+<h2 id="orgdfcf80b"><span class="section-number-2">1.</span> How to set remote URL for git&#xa0;&#xa0;&#xa0;<span class="tag"><span class="git">git</span></span></h2>
 <div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-bash">git remote set-url origin git@github.com:gitusername/repository.git
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb7ffcc2" class="outline-2">
+<h2 id="orgb7ffcc2"><span class="section-number-2">2.</span> How to show the remote URL settings in git&#xa0;&#xa0;&#xa0;<span class="tag"><span class="git">git</span></span></h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-bash">git remote -v
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9f1792b" class="outline-2">
+<h2 id="org9f1792b"><span class="section-number-2">3.</span> How to switch to SSH based git push&#xa0;&#xa0;&#xa0;<span class="tag"><span class="git">git</span></span></h2>
+<div class="outline-text-2" id="text-3">
 <p>
-git remote set-url origin git@github.com:gitusername/repository.git
+Ensure that repository is configured for SSH, then:
 </p>
+<div class="org-src-container">
+<pre class="src src-bash">git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+</pre>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: damu</p>
-<p class="date">Created: 2022-11-16 Wed 22:49</p>
+<p class="date">Created: 2022-11-16 Wed 23:57</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
