@@ -50,7 +50,7 @@ jobs:
     - name: Soundness check
       run: |-
         cd main
-        datasette . --get / | grep "Simon Willison: TIL"
+        datasette . --get / | grep "Damu: TIL"
     - name: Generate missing screenshots
       run: |-
         cd main
@@ -68,33 +68,3 @@ jobs:
         git config --global user.name "README-bot"
         git diff --quiet || (git add README.md && git commit -m "Updated README")
         git push
-    - name: Upload latest tils.db to the S3 bucket
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: |-
-        s3-credentials put-object til.simonwillison.net tils.db main/tils.db
-    - name: Deploy Datasette using Vercel
-      env:
-        NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
-      run: |-
-        cd main
-        wget https://latest.datasette.io/fixtures.db
-        datasette publish vercel tils.db fixtures.db \
-          --token $NOW_TOKEN \
-          --project simon-til \
-          --scope datasette \
-          --metadata metadata.yaml \
-          --static static:static \
-          --install datasette-template-sql \
-          --install "datasette-sitemap>=1.0" \
-          --install "datasette-atom>=0.7" \
-          --install datasette-json-html \
-          --install beautifulsoup4 \
-          --install "datasette-debug-asgi>=1.1" \
-          --install "datasette-graphql>=0.12" \
-          --install datasette-media \
-          --install datasette-block-robots \
-          --plugins-dir plugins \
-          --template-dir templates \
-          --public
