@@ -1,0 +1,6 @@
+#+AUTHOR: damu
+#+TITLE: TIL-2022-11-17
+#+OPTIONS: toc:nil
+#+OPTIONS: ^:{}
+* How to ensure server can only be accessed with ssh key :ssh:opsec:
+This is a very thorough [[https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server][guide]] from DigitalOcean.
